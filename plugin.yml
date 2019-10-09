@@ -1,0 +1,7 @@
+name: TGClan
+version: 1.0
+main: me.trow.tgclan.Main
+softdepend: [TGHome,TGBau,MVdWPlaceholderAPI]
+
+commands:
+   clan:

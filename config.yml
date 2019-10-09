@@ -1,0 +1,402 @@
+#Variaveis-FeatherBoard:
+#{tgclan:color_tag} = Tag do clan com cor / {tgclan:kdr} = KDR do player / {tgclan:kt} = Total kills do player
+#{tgclan:kc} = Kills Civis / {tgclan:kn} = Kills Neutras / {clan_tag} = Tag do clan / {tgclan:kdr_clan} = KDR do Clan
+
+Comandos:
+- '&a/clan criar &6<Tag> <Nome> &f- &eCria um clan.'
+- '&a/clan deletar &f- &eDeleta todo seu clan.'
+- '&a/clan aceitar &6<Clan> &f- &eAceita o convite de um clan.'
+- '&a/clan negar &6<Clan> &f- &eNega o convite de um clan.'
+- '&a/clan convidar &6<Player> &f- &eConvida um player para participar do clan.'
+- '&a/clan stats &f- &eVe o seu stats.'
+- '&a/clan stats &6<Player> &f- &eVe o stats de um player.'
+- '&a/clan info &f- &eVeja as informacoes do seu clan.'
+- '&a/clan info &6<Clan> &f- &eVeja as informacoes de outro clan.'
+- '&a/clan confiar &f- &eMuda o status de um player.'
+- '&a/clan lider &6<Player> &f- &eDeixa um player como lider do clan.'
+- '&a/clan tirarlider &6<Player> &f- &eTira um player de lider do clan.'
+- '&a/. &6<Msg> &f- &eChat privado do clan.'
+- '&a/clan prefix &6<Player> <Prefix> &f- &eAdiciona o prefix do player no chat do clan.'
+- '&a/clan pvp &6<&aON&f/&cOFF&6> &f- &eAtiva/Desativa pvp entre os membros do clan.'
+- '&a/clan resetkdr &f- &eReseta o seu kdr.'
+- '&a/clan kick &6<Player> &f- &eTira um player do clan.'
+- '&a/clan sair &f- &eSai do seu clan atual.'
+- '&a/clan aliado &6<Clan> &f- &eAdiciona um clan como aliado.'
+- '&a/clan rival &6<Clan> &f- &eAdiciona um clan como rival.'
+- '&a/clan unaliado &6<Clan> &f- &eRemove um clan da lista de aliados.'
+- '&a/clan unrival &6<Clan> &f- &eRemove um clan da lista de rival.'
+- '&a/clan aceitaralianca &6<Clan> &f- &eAceita a alianca de um clan.'
+- '&a/clan negaralianca &6<Clan> &f- &eNega a alianca de um clan.'
+- '&a/clan modtag &6<Tag> &f- &eModifca a tag do clan.'
+- '&a/clan moditem &6<ID:Data> &f- &eModifca o icone do clan.'
+- '&a/clan home &f- &eVai para a home do clan.'
+- '&a/clan sethome &f- &eSeta uma home.'
+- '&a/clan delhome &f- &eDeleta uma home.'
+- '&a/clan clans &6<Pag> &f- &eMostra informacoes gerais sobre os clans.'
+- '&a/clan money &6<Give&a/&6Take> <Valor> &f- &eVer/Dar/Tirar money do clan.'
+
+Comandos_Staff:
+- '&a/clan resetkdr &6<Player> &f- &eReseta o KDR de um player.'
+- '&a/clan remover &6<Clan> &f- &eDeleta um clan do servidor.'
+- '&a/clan motimadm &6<Clan> &a<Sim/Nao> &f-&eAtiva/Desativa o motim de um clan.'
+- '&a/clan slots <set/add/ver> &6<Clan> &a<#Slots> &f-&eConfig do limite de players do clan.'
+
+Msg:
+  Pag_Invalida: "&cA pagina informada nao e valida!"
+  Aguarde_O_Motim_Acabar: "&cAguarde o Motim acabar para fazer isso."
+  Negou_Aliado: "&bVoce negou o pedido de alianca do clan."
+  Motim_Iniciado: "&3[Clan] &bMotim iniciado! Decidam se &a@candidato&b sera o novo lider."
+  Sem_Motim: "&cSeu clan nao tem um motim nesse momento."
+  Perdeu_Votacao: "&cO player &a@player&c, perdeu a candidatura a lider do seu clan!"
+  Votem: "&bVotem no candidato a lider do seu clan."
+  Voce_Ja_Votou: "&cVoce ja votou! Voto: &a@voto"
+  Empate: "&3[CLAN] &bOuve um empate na votacao para lider."
+  Em_Motim: "&3[CLAN] &bSeu clan ja esta em motim!"
+  Clan_Motim_Editado: "&bMotim do clan &a@clan&b mudado para &a@sn"
+  Clan_Slots_Modificado: "&bSlots do clan &a@clan&b mudado para &a@sn"
+  Id_Nao_Existe: "&cEste ID nao existe."
+  Item_Mudado: "&bItem mudado para &a@item"
+  Clan_Sem_Home: "&cSeu clan nao tem home setada!"
+  Money: "&3[Clan] Money: &a@money"
+  Teleportado: "&eTeleportado!"
+  Home_Ja_Existe: "&cEssa home ja existe."
+  Money_Add: "&3[Clan] &bMoney &a@money&b adicionado a conta do clan."
+  Money_Removido: "&3[Clan] &bMoney &a@money&b removido da conta do clan."
+  Limite_Atingido: "&cLimite de homes atingido!"
+  Limite_Baus_Atingido: "&cLimite de baus atingido!"
+  Clan_Sem_Money: "&cO clan nao tem todo esse montante em coins."
+  Use_Money: "&cUse: &a/clan money &6<Give&a/&6Take> &e<Valor>&c."
+  Home_Setada: "&bHome setada com sucesso."
+  Home_Deletada: "&3[Clan] &bHome deletada!"
+  Valor_Invalido: "&cValor digitado e invalido!"
+  Lista_Clans: "&3[Lista]&b: &a@clans"
+  Sem_Clan: "&cVoce nao tem clan."
+  Saiu: "&bVoce saiu do clan: &b@clan"
+  Sem_Permissao: "&cSem permissao para: &atgclan.@perm!"
+  Use_Sim_Nao: "&cVoce deve digitar &aSim &cou &aNao&c."
+  Use_Deletar: "&cUse: &a/clan deletar &6<&aSim&f/&4Nao&6>&c."
+  Use_ModItem: "&cUse: &a/clan moditem &6<ID:Data>"
+  Use_Rival: "&cUse: &a/clan rival &6<add/remove> &e<Clan>&c."
+  Use_Aliado: "&cUse: &a/clan aliado &6<add/remove> &e<Clan>&c."
+  Use_Aceitar: "&cUse: &a/clan aceitar &6<Clan>&c."
+  Use_Convidar: "&cUse: &a/clan convidar &6<Player>&c."
+  Use_Criar: "&cUse: &a/clan criar &6<Tag> &e<Nome>&c."
+  Use_Confiar: "&cUse: &a/clan confiar &6<Nome> &e<&aSim&f/&eNao&e>&c."
+  Use_Kick: "&cUse: &a/clan kick &6<Player>&c."
+  Use_Lider: "&cUse: &a/clan lider &6<Player>&c."
+  Use_Novo_Lider: "&cUse: &a/clan lider &6<Player> &e<Sim/Nao>&c."
+  Use_Negar: "&cUse: &a/clan negar &6<Clan>&c."
+  Use_Prefix: "&cUse: &a/clan prefix &6<Player> &e<Prefix>&c."
+  Use_Tirar_Lider: "&cUse: &a/clan tirarlider &6<Player> &e<Sim/Nao>&c."
+  Use_ModTag: "&cUse: &a/clan modtag &6<Tag>"
+  Use_Remover: "&cUse: &a/clan remover &6<Clan> &e<Motivo>&c."
+  Use_Motim: "&cUse: &a/clan motim &6<Player&a/&6Votar>&c."
+  Use_Votar_Motim: "&cUse: &a/clan motim votar &6<&aSim&c/&aNao&6>&c."
+  Use_MotimAdm: "&cUse: &a/clan motimadm &6<Clan> <&aSim&c/&aNao&6>&c."
+  Use_Slots: "&cUse: &a/clan slots &6<Clan> &a<Slot>"
+  Sem_Motim: "&cSeu clan nao tem um motim nesse momento."
+  Limite_Prefix_Max: "&cO limite maximo de prefix e de &a@max&c, caracteres."
+  Prefix_Setado: "&bVoce setou o prefix do player: &a@player&b, para: &a@prefix&b."
+  Sem_Informacao: "&cNenhuma informacao encontrada!"
+  KDR_Do_Player_Resetado: "&bVoce resetou o KDR do player: &a@player&b."
+  Resetou_KDR: "&bVoce resetou seu KDR."
+  Removeu_Lider: "&bVoce removeu lider do player: &a@player&b."
+  Clan_Nao_Existe: "&cEste clan nao existe."
+  Clan_Deletado: "&bO player &a@player&b, deletou o clan &a@clan&b, motivo: &a@motivo&b."
+  Ja_Tem_Clan: "&cVoce ja tem clan."
+  Clan_Ja_Existe: "&cEste clan ja existe."
+  Erro_Tag: "&cTag muito pequena ou muito grande."
+  Comando_Nao_Existe: "&cEste comando nao e de clan. Clique aqui para ver os comandos do clan."
+  Clan_Criado: "&bClan &a@clan&b, criado com sucesso."
+  Deletado_Com_Sucesso: "&cClan deletado com sucesso."
+  Nao_Sao_Do_Mesmo_Clan: "&cVoce e este player nao sao do mesmo clan."
+  Mesmo_Clan: "&cVoce e &a@player&c, sao do mesmo clan."
+  Nao_Pode_Executar_Mesmo_Clan: "&cVoce nao pode executar a acao para os clans informados."
+  Clan_Aliado_Com_O_Clan_Do_Player: "&cO seu clan e o clan de &a@player&c, sao aliados."
+  Player_Removido: "&bO player &a@player&b, foi removido do seu clan."
+  Virou_Lider: "&bO player &a@player&b, se tornou lider!"
+  Agora_E_Lider: "&bVoce agora e lider do clan."
+  Convite_Negado: "&cVoce negou o convite do clan."
+  PvP_Mudado: "&bPvP alterado para: &a@pvp"
+  Player_Sem_Clan: "&cEste player nao tem clan."
+  Voce_Nao_E_Lider: "&cVoce nao e lider do seu clan."
+  Nao_E_Lider: "&cEste player nao e lider."
+  E_Lider: "&cEste player ja e lider."
+  E_Confiavel: "&ceste player ja e confiavel."
+  Clan_Ja_E_Rival: "&cEste clan ja esta na sua lista de rivais."
+  Clan_Agora_E_Rival: "&bO clan &a@clan&b, agora esta na sua lista de rival."
+  Clan_Deixou_De_Ser_Rival: "&bO clan &a@clan&b, nao e mais seu rival."
+  Clan_Nao_Lhe_Convidou: "&cEste clan nao lhe convidou!"
+  Entrou_Pro_Clan: "&bO player &a@player&b, entrou para o clan: &a@clan&b."
+  Use_Aceitar_Aliado: "&cUse: &a/clan aceitaraliado &6<Clan>&c."
+  Nao_Pediu_Alianca: "&cEste clan nao pediu alianca."
+  Clan_Ja_E_Aliado: "&cEste clan ja e seu aliado."
+  Clan_Nao_E_Aliado: "&cEste clan nao e seu aliado."
+  Pedindo_De_Alianca_Enviado: "&bPedido de alianca enviado!"
+  Clan_Nao_E_Mais_Aliado: "&cO clan &a@clan&c, nao e mais seu aliado."
+  Offline: "&cPlayer offline!"
+  Player_Ja_Esta_No_Clan: "&cEste player ja esta na sua lista de membros."
+  Aguarde_Fim_Convite: "&cSeu clan ja esta convidando outro player, aguarde!"
+  Sem_Money: "&cMoney insuficiente!"
+  Convite_Enviado: "&bVoce convidou o player @player&b, para o seu clan."
+  Nao_E_Numero: "&cDigite um numero correto."
+  Nao_Pode_Tirar_Seu_Lider: "&cVoce nao pode tirar seu proprio lider."
+  Max_Players_Atingido: "&cSeu clan atingiu o maximo de players permitido. Maximo: &a@maxplayers"
+  Player_Ja_Tem_Clan: "&cEste player ja tem clan."
+  Nao_E_Possivel_Alterar_A_Sigla_Do_Clan: "&cNao e possivel alterar a sigla &a@sigla&c, do clan."
+  Tag_Clan_Modificada: "&bA tag do clan foi modificada para: &a@tag"
+  Status_Confiavel: "&3[Clan] &bSeu status de confiavel foi atualizado! Confiavel: &a@status"
+  Atualizou_Confiavel: "&3[Clan] &bVoce atualizou o status de &a@player&b para confiavel: &a@status"
+  Prox_Pag_Comandos: "&3[Clan] &bClique aqui para ver a pagina &a@prox&b de comandos."
+  Sem_Mais_Comandos: "&4[Clan] &cNao ha mais comandos para serem exibidos."
+  Candidato_Incorreto: "&4[Clan] &cNao foi este o nick sugerido de lider. Nick: &a@player"
+  Voce_Nao_Pode_Votar_Sobre_Si_Mesmo: "&4[Clan] &cVoce nao pode votar em uma votacao sobre voce mesmo."
+  Convite_Expirado: "&3[Clan] &bO convite do clan &a@clan&b expirou."
+  Confirmar_Deletar_Clan: "&3[Clan] &bClique nesta mensagem para confirmar que deseja deletar seu clan!"
+  #Ja_Convidando-> @tipo = Caso o convite for para o player entrar em 1 clan, @tipo = player. Se for convite de aliado, retornara @tipo = clan.
+  Ja_Convidando: "&3[Clan] &bO seu clan ja esta com &a1&b @tipo convidado. Aguarde ate o convite expirar!"
+  Digite_A_Tag_No_Chat: "&3[Clan] &bDigite a tag do clan que voce deseja ver as informacoes no CHAT."
+  Caractere_Especial:
+    Nome: "&cVoce nao pode por caracteres especiais no nome."
+    Tag: "&cVoce nao pode por caracteres especiais na tag."
+  Convite_Expirado_Clan:
+    Player:
+    - '&3[Clan] &bO convite feito ao player &a@player&b expirou!'
+    - '&3[Clan] &bO clan ja pode convidar outro player.'
+    Clan:
+    - '&3[Clan] &bO convite feito ao clan &a@clan&b expirou!'
+    - '&3[Clan] &bO clan ja pode convidar outro clan para aliado.'
+  Tirou_Lider_Democraticamente:
+    - '&3[Clan] &bO clan perdeu um lider democraticamente!'
+    - '&3[Clan] &bA votacao para que isso ocorresse foi unanime!'
+    - '&3[Clan] &bDeixou de ser lider: &a@player'
+  Falta_Lider_Votar_Tirar_Lider:
+    - '&3[Clan] &bVotacao para tirar lider do clan em andamento...'
+    - '&3[Clan] &bJa votaram: &a@jaVotaram'
+    - '&3[Clan] &bPara &a@player&b perder status de lider, todos os lideres precisam votar.'
+    - '&3[Clan] &bPara votar &a&lSIM&b, clique aqui.@cmd:/clan tirarlider @player sim'
+    - '&3[Clan] &bPara votar &4&lNAO&b, clique aqui.@cmd:/clan tirarlider @player nao'
+  Lider_Perdeu_Na_Votacao:
+    - '&3[Clan] &bA votacao sobre lider do player &a@player foi finalizada.'
+    - '&3[Clan] &bUm dos atuais lideres do clan votou &4&lNAO&b.'
+  Falta_Lider_Votar_Novo_Lider:
+    - '&3[Clan] &bVotacao para nomear novo lider do clan em andamento...'
+    - '&3[Clan] &bJa votaram: &a@jaVotaram'
+    - '&3[Clan] &bPara &a@player&b virar lider, todos os lideres precisam votar.'
+    - '&3[Clan] &bPara votar &a&lSIM&b, clique aqui.@cmd:/clan lider @player sim'
+    - '&3[Clan] &bPara votar &4&lNAO&b, clique aqui.@cmd:/clan lider @player nao'
+  Falta_Lider_Votar_Deletar:
+    - '&3[Clan] &bVotacao para deletar o clan em andamento...'
+    - '&3[Clan] &bJa votaram: &a@jaVotaram'
+    - '&3[Clan] &bPara o clan ser deletado, todos os lideres precisam votar.'
+    - '&3[Clan] &bPara votar &a&lSIM&b, clique aqui.@cmd:/clan deletar sim'
+    - '&3[Clan] &bPara votar &4&lNAO&b, clique aqui.@cmd:/clan deletar nao'
+  Clan_Removido_Democraticamente:
+    - '&3[Clan] &bO clan foi deletado!'
+    - '&3[Clan] &bA votacao para que isso ocorresse foi unanime!'
+  Novo_Lider_Democraticamente:
+    - '&3[Clan] &bO clan ganhou 1 novo lider democraticamente!'
+    - '&3[Clan] &bA votacao para que isso ocorresse foi unanime!'
+    - '&3[Clan] &bNovo lider: &a@player'
+  Clan_Salvo_Por_Voto_Nao:
+    - '&3[Clan] &bO clan foi salvo!'
+    - '&3[Clan] &bUm dos lideres votou para nao deletar o clan!'
+    - '&3[Clan] &bLider que votou para nao deletar: &a@player'
+  Confirmar_Sair:
+    - '&3[Clan] &bVoce e o ultimo player do seu clan.'
+    - '&3[Clan] &bSe voce sair, seu clan sera deletado!'
+    - '&3[Clan] &bPara confirmar, clique nesta mensagem.'
+  Info_Clans:
+    - '&8Pagina: &f@pag&a/&f@totalpags'
+    - '&8Total clans: &f@totalclans'
+    - ''
+    - '&8Rank   Nome                        KDR     Membros'
+  Use_PvP:
+    - '&cUse:'
+    - '&a/clan pvp &6ON &fPara ativar o PvP.'
+    - '&a/clan pvp &6OFF &fPara desativar o PvP.'
+  #Replaces para o Stats:
+  #@clan - Clan Tag, @kdr - KDR,@mortes - Mortes,
+  #@totalkill - Total kills neutras e civis,@status - Lider,Membro,Sem Status
+  #@killsC - Kills Civis,@killsN - Kills neutras
+  Stats_Outros:
+    - '&b======== &a[&f Stats de @player &a] &b========'
+    - '&6Clan: &a@clan'
+    - '&6Status: @status'
+    - '&6KDR: &a@kdr'
+    - '&6Kills Neutras: &a@killsN'
+    - '&6Kills Civis: &a@killsC'
+    - '&6Total De Kills: &a@totalkill'
+    - '&6Mortes: &a@mortes'
+    - '&b============================'
+  Stats:
+    - '&b======== &a[&f Seu Stats &a] &b========'
+    - '&6Seu Clan: &a@clan'
+    - '&6Status: @status'
+    - '&6KDR: &a@kdr'
+    - '&6Kills Neutras: &a@killsN'
+    - '&6Kills Civis: &a@killsC'
+    - '&6Total De Kills: &a@totalkill'
+    - '&6Mortes: &a@mortes'
+    - '&b============================'
+  Negou_Convite:
+    - '&3O player &a@player&b, negou o convite de clan.'
+    - ''
+  Negou_Convite_Aliado:
+    - '&3O clan &a@clan&b, negou o convite de aliado.'
+    - ''
+  Clan_Stats:
+    - '&b======== &a[&f Clan Stats &a] &b========'
+    - '&6Seu Clan: &a@clan'
+    - '&6KDR: &a@kdr'
+    - '&6Lideres do Clan: &a@lideres'
+    - '&6Total de Membros: &a@totalmembros'
+    - '&6Rivais: &a@rivais'
+    - '&6Aliados: &a@aliados'
+    - '&6Money: &a@money'
+    - '&b================================'
+  Clan_Stats_Outro:
+    - '&b======== &a[&f Clan Stats &a] &b========'
+    - '&6Clan: &a@clan'
+    - '&6KDR: &a@kdr'
+    - '&6Lideres do Clan: &a@lideres'
+    - '&6Total de Membros: &a@totalmembros'
+    - '&6Rivais: &a@rivais'
+    - '&6Aliados: &a@aliados'
+    - '&6Money: &a@money'
+    - '&b================================'
+  Convite_Clan:
+    - '&3Voce esta sendo convidado pelo clan &a@clan&b.'
+    - '&3Deseja participar deste clan?!'
+    - '&a&lSIM@cmd:/clan aceitar @clan'
+    - '&4&lNAO@cmd:/clan negar @clan'
+  Add_Aliado_Info:
+    - '&3O clan &b@clan&3, esta pedindo alianca com o seu.'
+    - '&3Voce deseja aceitar?'
+    - '&a&lSIM@cmd:/clan aceitaralianca @clan'
+    - '&4&lNAO@cmd:/clan '
+  Clan_Aliado:
+    - '&3O clan &b@clan&b, agora e aliado do seu clan.'
+    - ''
+
+TabTag:
+  Tag:
+    Ativar: true
+    Tempo_De_Atualizar: 15
+    Formato: "[{tag}&f] "
+  Grupos:
+    Membro: "{clan}&f"
+    Vip: "{clan}&6"
+    Mod: "{clan}&2"
+    Admin: "{clan}&4"
+    Diretor: "{clan}&b"
+
+Config:
+  Usuario: "trow"
+  Qnt_Slot_Inicial: 1
+  Preco_Convidar: 1000
+  Tamanho_Max_Tag: 3
+  Tamanho_Min_Tag: 3
+  Preco_Criar_Clan: 20000
+  Money_Desativar_PvP: 500
+  Money_Ativar_PvP: 500
+  Max_Prefix_Chat_Clan: 10
+  Por_Pag:
+    Clans: 4
+    Comandos: 8
+  Max_Players_Por_Clan: 15
+  Tempo_Expirar:
+    #Tempo que levara para o convite de aliado expirar EM SEGUNDOS.
+    Convite_Clan: 60
+    #Tempo que levara para o convite para 1 player entrar no clan expirar EM SEGUNDOS.
+    Convite_Player: 60
+    #Tempo para expirar a requisicao para pesquisar um clan (digitar a tag do clan no chat e mostrar suas informacoes).
+    Pesquisa_Clan: 20
+  Limite:
+    #Maximo de players ao criar o clan.
+    Inicial: 5
+  Tag_Clan_Chat: "&7@clan"
+  Formato_Chat_Clan: "@prefix &a@nome&f: &a@msg"
+  #Info_All_Clans: "&a@tag &4| &a@color_tag &4| &a@membros &4| &a@lideres &4| &a@kdr &4| &a@rivais &4| &a@aliados"
+  Info_All_Clans: "&f@pos   &e[&a@color_tag&e] &a@nome                        &e@kdr    &f@membros"
+  Stats:
+    Seu_Clan: "&a@clan"
+    Sem_Clan: "&8Sem Clan"
+    Stats_Lider: "&4Lider"
+    Stats_Membro: "&7Membro"
+    Sem_Stats: "&8Sem Status"
+  SQL:
+    Modo: 2
+    Host: 'localhost'
+    DataBase: 'trow'
+    User: 'trow'
+    Pass: '123'
+
+Cabecas:
+  Ativar: true
+  Skins:
+  # https://minecraft-heads.com/custom-heads/alphabet?start=1360 (Para saber como pegar este link: https://i.imgur.com/haPvwb1.gif)
+  - 'A->http://textures.minecraft.net/texture/f417618ca1f5031d1ab97ba3253d088f4da7a773bbb56f1dec9b999d71ec'
+  - 'B->http://textures.minecraft.net/texture/25feb8157695a2594a5585b9def5f7827c6e5e8fcb2f23cc3d34d733ca635b'
+GUI:
+  #GUI do comando /clan list
+  Clans:
+    Nome: "&7Lista dos melhores clans"
+    Tamanho: 54
+    Ativar: true
+    Completar_GUI:
+      Ativar: true
+      Item_ID: "160:10"
+      Nome: "&8Completar GUI"
+      Lore:
+      - '&8Item para completar o GUI'
+    Item_Sem_Clan:
+      Item_ID: "95:14"
+      Nome: "&c&lSem Clan"
+      Lore:
+      - '&7Nao ha nenhum clan'
+      - '&7para exibir nesta pagina.'
+      Slot: 5
+      Linha: 2
+    Item_Back_Pag:
+      Item_ID: "1:0"
+      URL: "http://textures.minecraft.net/texture/cdc9e4dcfa4221a1fadc1b5b2b11d8beeb57879af1c42362142bae1edd5"
+      Nome: "&aPagina anterior"
+      Lore:
+      - '&7Clique para voltar'
+      - '&7a pagina anterior.'
+      Slot: 4
+      Linha: 6
+    Item_Next_Pag:
+      Item_ID: "1:0"
+      URL: "http://textures.minecraft.net/texture/956a3618459e43b287b22b7e235ec699594546c6fcd6dc84bfca4cf30ab9311"
+      Nome: "&aPagina seguinte"
+      Lore:
+      - '&7Clique para ir'
+      - '&7a pagina seguinte.'
+      Slot: 6
+      Linha: 6
+    Item_Search:
+      #Tentei por uma placa mas estava dando erro no uso do NBTTag.
+      Item_ID: "1:0"
+      URL: "null"
+      Nome: "&a&lPesquisar Clan"
+      Lore:
+      - '&7Clique para pesquisar'
+      - '&7um clan de sua escolha.'
+      Slot: 5
+      Linha: 6
+    Show:
+      #Slot em que vai começar a aparecer os clans no GUI (/clan list)
+      Start: 11
+      #Slot em que deve parar de aparecer os clans no GUI (/clan list).
+      End: 35
+    Lore:
+      - '&7Nome: &f@nome'
+      - '&7Tag: &f@tag'
+      - '&7Membros: &f@membros'
+      - '&7KDR: &f@kdr'
+      - '&7Lideres: &f@lideres'
+      - '&7Aliados: &f@aliados'
+      - '&7Rivais: &f@rivais'
+      - '&7Money: &f@money'
